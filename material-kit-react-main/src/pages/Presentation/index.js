@@ -52,7 +52,7 @@ function Presentation() {
         action={{
           type: "external",
           route: "https://www.creative-tim.com/product/material-kit-react",
-          label: "free download",
+          label: "Descubre Más",
           color: "info",
         }}
         sticky
@@ -81,7 +81,7 @@ function Presentation() {
                 },
               })}
             >
-              Material Kit 2 React{" "}
+              RocMan Producciones
             </MKTypography>
             <MKTypography
               variant="body1"
@@ -90,8 +90,7 @@ function Presentation() {
               px={{ xs: 6, lg: 12 }}
               mt={1}
             >
-              Free & Open Source Web UI Kit built over ReactJS &amp; MUI. Join over 1.6 million
-              developers around the world.
+              Llevamos tu música del estudio al escenario con producción, grabación y conciertos de alto nivel.
             </MKTypography>
           </Grid>
         </Container>
