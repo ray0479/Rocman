@@ -42,21 +42,21 @@ function Information() {
                 icon="touch_app"
                 title={
                   <>
-                    Feel the
+                    Producción Musical
                     <br />
-                    Material Kit
+                    Integral
                   </>
                 }
-                description="All the MUI components that you need in a development have been re-design with the new look."
+                description="Llevamos tu música del estudio al escenario con un proceso completo de grabación, mezcla y mastering."
               />
               <RotatingCardBack
                 image={bgBack}
-                title="Discover More"
-                description="You will save a lot of time going from prototyping to full-functional code because all elements are implemented."
+                title="Haz Realidad tu Proyecto"
+                description="Trabajamos contigo en cada paso para lograr el sonido que imaginas."
                 action={{
                   type: "internal",
-                  route: "/sections/page-sections/page-headers",
-                  label: "start with header",
+                  route: "/",
+                  label: "Descubre Más",
                 }}
               />
             </RotatingCard>
@@ -65,33 +65,32 @@ function Information() {
             <Grid container spacing={3}>
               <Grid item xs={12} md={6}>
                 <DefaultInfoCard
-                  icon="content_copy"
-                  title="Full Documentation"
-                  description="Built by developers for developers. Check the foundation and you will find
-                    everything inside our documentation."
+                  icon=""
+                  title="Sonido de Alta Calidad"
+                  description="Usamos tecnología de vanguardia para lograr un audio profesional en cada producción."
                 />
               </Grid>
               <Grid item xs={12} md={6}>
                 <DefaultInfoCard
-                  icon="flip_to_front"
-                  title="MUI Ready"
-                  description="The world's most popular react components library for building user interfaces."
+                  icon=""
+                  title="Distribución en Plataformas"
+                  description="Te ayudamos a lanzar tu música en Spotify, Apple Music y todas las plataformas digitales."
                 />
               </Grid>
             </Grid>
             <Grid container spacing={3} sx={{ mt: { xs: 0, md: 6 } }}>
               <Grid item xs={12} md={6}>
                 <DefaultInfoCard
-                  icon="price_change"
-                  title="Save Time & Money"
-                  description="Creating your design from scratch with dedicated designers can be very expensive. Start with our Design System."
+                  icon=""
+                  title="Eventos y Conciertos"
+                  description="Organizamos y producimos presentaciones en vivo para que tu música llegue al público."
                 />
               </Grid>
               <Grid item xs={12} md={6}>
                 <DefaultInfoCard
-                  icon="devices"
-                  title="Fully Responsive"
-                  description="Regardless of the screen size, the website content will naturally fit the given resolution."
+                  icon=""
+                  title="Asesoría para Artistas"
+                  description="Te guiamos en cada paso del camino, desde la producción hasta la estrategia de lanzamiento."
                 />
               </Grid>
             </Grid>
