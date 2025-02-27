@@ -121,8 +121,9 @@ function Presentation() {
                 variant="gradient"
                 color="info"
                 icon="flag"
-                title="Getting Started"
-                description="Check the possible ways of working with our product and the necessary files for building your own project."
+                title="Eventos a Medida"
+                description="Desde festivales hasta conciertos exclusivos, 
+                creamos experiencias únicas con un equipo de profesionales que cuida cada detalle."
                 action={{
                   type: "external",
                   route: "https://www.creative-tim.com/learning-lab/react/overview/material-kit/",
