@@ -59,7 +59,7 @@ function DesignBlocks() {
   ));
 
   return (
-    <MKBox component="section" my={6} py={6}>
+    <MKBox component="section" my={-5} py={6}>
       <Container>
         <Grid
           container
@@ -70,13 +70,6 @@ function DesignBlocks() {
           alignItems="center"
           sx={{ textAlign: "center", my: 6, mx: "auto", px: 0.75 }}
         >
-          <MKBadge
-            variant="contained"
-            color="info"
-            badgeContent=""
-            container
-            sx={{ mb: 2 }}
-          />
         </Grid>
       </Container>
       <Container sx={{ mt: 6 }}>{renderData}</Container>
