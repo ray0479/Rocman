@@ -18,18 +18,6 @@ const imagesPrefix =
 
 export default [
   {
-    items: [
-    ],
-  },
-  {
-    items: [
-    ],
-  },
-  {
-    items: [
-    ],
-  },
-  {
     title: "Attention Catchers",
     description: "20+ Fully coded components that popup from different places of the screen",
     items: [
