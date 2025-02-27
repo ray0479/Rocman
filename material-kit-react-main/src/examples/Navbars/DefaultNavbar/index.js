@@ -37,13 +37,13 @@ import MKTypography from "components/MKTypography";
 import MKButton from "components/MKButton";
 
 // Material Kit 2 React example components
-import DefaultNavbarDropdown from "examples/Navbars/DefaultNavbar/DefaultNavbarDropdown";
+
 import DefaultNavbarMobile from "examples/Navbars/DefaultNavbar/DefaultNavbarMobile";
 
 // Material Kit 2 React base styles
 import breakpoints from "assets/theme/base/breakpoints";
 
-function DefaultNavbar({ brand, routes, transparent, light, action, sticky, relative, center }) {
+function DefaultNavbar({ logo, routes, transparent, light, action, sticky, relative, center }) {
   const [dropdown, setDropdown] = useState("");
   const [dropdownEl, setDropdownEl] = useState("");
   const [dropdownName, setDropdownName] = useState("");
@@ -81,25 +81,7 @@ function DefaultNavbar({ brand, routes, transparent, light, action, sticky, rela
     return () => window.removeEventListener("resize", displayMobileNavbar);
   }, []);
 
-  const renderNavbarItems = routes.map(({ name, icon, href, route, collapse }) => (
-    <DefaultNavbarDropdown
-      key={name}
-      name={name}
-      icon={icon}
-      href={href}
-      route={route}
-      collapse={Boolean(collapse)}
-      onMouseEnter={({ currentTarget }) => {
-        if (collapse) {
-          setDropdown(currentTarget);
-          setDropdownEl(currentTarget);
-          setDropdownName(name);
-        }
-      }}
-      onMouseLeave={() => collapse && setDropdown(null)}
-      light={light}
-    />
-  ));
+
 
   // Render the routes on the dropdown menu
   const renderRoutes = routes.map(({ name, collapse, columns, rowsPerColumn }) => {
@@ -477,17 +459,10 @@ function DefaultNavbar({ brand, routes, transparent, light, action, sticky, rela
             pl={relative || transparent ? 0 : { xs: 0, lg: 1 }}
           >
             <MKTypography variant="button" fontWeight="bold" color={light ? "white" : "dark"}>
-              {brand}
+              <img src={logo}/>
             </MKTypography>
           </MKBox>
-          <MKBox
-            color="inherit"
-            display={{ xs: "none", lg: "flex" }}
-            ml="auto"
-            mr={center ? "auto" : 0}
-          >
-            {renderNavbarItems}
-          </MKBox>
+          
           <MKBox ml={{ xs: "auto", lg: 0 }}>
             {action &&
               (action.type === "internal" ? (
@@ -551,7 +526,7 @@ function DefaultNavbar({ brand, routes, transparent, light, action, sticky, rela
 
 // Setting default values for the props of DefaultNavbar
 DefaultNavbar.defaultProps = {
-  brand: "RocMan Producciones",
+  logo: "../../../assets/images/logo.png",
   transparent: false,
   light: false,
   action: false,
@@ -562,7 +537,7 @@ DefaultNavbar.defaultProps = {
 
 // Typechecking props for the DefaultNavbar
 DefaultNavbar.propTypes = {
-  brand: PropTypes.string,
+  logo: PropTypes.string,
   routes: PropTypes.arrayOf(PropTypes.shape).isRequired,
   transparent: PropTypes.bool,
   light: PropTypes.bool,
