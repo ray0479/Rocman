@@ -14,6 +14,7 @@ Coded by www.creative-tim.com
 */
 
 // react-router-dom components
+import { useState } from "react";
 import { Link } from "react-router-dom";
 
 // @mui material components
@@ -25,6 +26,12 @@ import MKBox from "components/MKBox";
 import MKBadge from "components/MKBadge";
 import MKTypography from "components/MKTypography";
 
+import Dialog from "@mui/material/Dialog";
+import DialogActions from "@mui/material/DialogActions";
+import DialogContent from "@mui/material/DialogContent";
+import DialogTitle from "@mui/material/DialogTitle";
+
+
 // Presentation page components
 import ExampleCard from "pages/Presentation/components/ExampleCard";
 
@@ -32,6 +39,20 @@ import ExampleCard from "pages/Presentation/components/ExampleCard";
 import data from "pages/Presentation/sections/data/designBlocksData";
 
 function DesignBlocks() {
+  const [openModal, setOpenModal] = useState(false);
+  const [imageUrl, setImageUrl] = useState("");
+
+  // Función para abrir el modal con la imagen
+  const handleImageClick = (image) => {
+    setImageUrl(image);
+    setOpenModal(true);
+  };
+
+  const handleClose = () => {
+    setOpenModal(false);
+    setImageUrl(""); // Resetear la imagen cuando se cierra el modal
+  };
+
   const renderData = data.map(({ title, description, items }) => (
     <Grid container spacing={3} sx={{ mb: 10 }} key={title}>
       <Grid item xs={12} lg={3}>
@@ -49,7 +70,12 @@ function DesignBlocks() {
           {items.map(({ image, name, count, route, pro }) => (
             <Grid item xs={12} md={4} sx={{ mb: 2 }} key={name}>
               <Link to={pro ? "/" : route}>
-                <ExampleCard image={image} name={name} count={count} pro={pro} />
+                <MKBox
+                  position="relative"
+                  onClick={() => handleImageClick(image)} // Al hacer clic, abrir el modal
+                >
+                  <ExampleCard image={image} name={name} count={count} pro={pro} />
+                </MKBox>
               </Link>
             </Grid>
           ))}
@@ -73,6 +99,34 @@ function DesignBlocks() {
         </Grid>
       </Container>
       <Container sx={{ mt: 6 }}>{renderData}</Container>
+
+      {/* Modal to show the image */}
+      <Dialog open={openModal} onClose={handleClose} maxWidth="md" fullWidth>
+        <DialogTitle>Imagen</DialogTitle>
+        <DialogContent>
+          <MKBox
+            component="img"
+            src={imageUrl}
+            alt="Full Image"
+            sx={{
+              width: "100%",
+              height: "auto",
+              maxHeight: "80vh",
+              objectFit: "contain",
+            }}
+          />
+        </DialogContent>
+        <DialogActions>
+          <MKTypography
+            variant="button"
+            color="secondary"
+            sx={{ cursor: "pointer", padding: "8px" }}
+            onClick={handleClose}
+          >
+            Close
+          </MKTypography>
+        </DialogActions>
+      </Dialog>
     </MKBox>
   );
 }

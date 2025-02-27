@@ -18,8 +18,8 @@ const imagesPrefix =
 
 export default [
   {
-    title: "Attention Catchers",
-    description: "20+ Fully coded components that popup from different places of the screen",
+    title: "Eventos",
+    description: "Producción y programación para espacios escenicos",
     items: [
       {
         image: `${imagesPrefix}/alerts.jpg`,
@@ -48,68 +48,36 @@ export default [
     ],
   },
   {
-    title: "Elements",
-    description: "80+ carefully crafted small elements that come with multiple colors and shapes",
+    title: "Artistas",
+    description: "Promotor de conciertos y espectáculos de artistas",
     items: [
       {
-        image: `${imagesPrefix}/buttons.jpg`,
-        name: "Buttons",
-        count: 6,
-        route: "/sections/elements/buttons",
+        image: "/edwinRivera.png",
+        name: "Edwin Rivera",
       },
       {
-        image: `${imagesPrefix}/avatars.jpg`,
-        name: "Avatars",
-        count: 2,
-        route: "/sections/elements/avatars",
+        image: "/alejandroSanz.png",
+        name: "Alejandro Sanz",
       },
       {
-        image: `${imagesPrefix}/dropdowns.jpg`,
-        name: "Dropdowns",
-        count: 2,
-        route: "/sections/elements/dropdowns",
+        image: "/mannyManuel.png",
+        name: "Manny Manuel",
       },
       {
-        image: `${imagesPrefix}/switch.jpg`,
-        name: "Toggles",
-        count: 2,
-        route: "/sections/elements/toggles",
+        image: "/tonnyTunTun.png",
+        name: "Tonny Tun Tun",
       },
       {
-        image: `${imagesPrefix}/social-buttons.jpg`,
-        name: "Social Buttons",
-        count: 2,
-        pro: true,
+        image: "/tonySantos.png",
+        name: "Tony Santos",
       },
       {
         image: `${imagesPrefix}/breadcrumbs.jpg`,
         name: "Breadcrumbs",
-        count: 1,
-        route: "/sections/elements/breadcrumbs",
       },
       {
         image: `${imagesPrefix}/badges.jpg`,
         name: "Badges",
-        count: 3,
-        route: "/sections/elements/badges",
-      },
-      {
-        image: `${imagesPrefix}/progress.jpg`,
-        name: "Progress Bars",
-        count: 4,
-        route: "/sections/elements/progress-bars",
-      },
-      {
-        image: `${imagesPrefix}/tables.jpg`,
-        name: "Tables",
-        count: 3,
-        pro: true,
-      },
-      {
-        image: `${imagesPrefix}/typography.jpg`,
-        name: "Typography",
-        count: 2,
-        route: "/sections/elements/typography",
       },
     ],
   },
