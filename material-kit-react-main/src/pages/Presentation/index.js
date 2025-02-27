@@ -24,7 +24,7 @@ import MKTypography from "components/MKTypography";
 
 // Material Kit 2 React examples
 import DefaultNavbar from "examples/Navbars/DefaultNavbar";
-import DefaultFooter from "examples/Footers/DefaultFooter";
+import SimpleFooter from "examples/Footers/SimpleFooter";
 import FilledInfoCard from "examples/Cards/InfoCards/FilledInfoCard";
 
 // Presentation page sections
@@ -38,26 +38,26 @@ import Testimonials from "pages/Presentation/sections/Testimonials";
 import BuiltByDevelopers from "pages/Presentation/components/BuiltByDevelopers";
 
 // Routes
-import routes from "routes";
 import footerRoutes from "footer.routes";
 
 // Images
 import bgImage from "assets/images/bg-presentation.jpg";
 
+
 function Presentation() {
   return (
     <>
-      <DefaultNavbar
-        routes={routes}
-        action={{
-          type: "external",
-          route: "/",
-          label: "Descubre Más",
-          color: "info",
-        }}
+        <DefaultNavbar
 
-        sticky
-      />
+          action={{
+            type: "external",
+            route: "/",
+            label: "Descubre Más",
+            color: "info",
+          }}
+          sticky
+        />
+
       <MKBox
         minHeight="75vh"
         width="100%"
@@ -130,7 +130,7 @@ function Presentation() {
                 creamos experiencias únicas con un equipo de profesionales que cuida cada detalle."
                 action={{
                   type: "external",
-                  route: "https://www.creative-tim.com/learning-lab/react/overview/material-kit/",
+                  route: "",
                   label: "SABER MÁS",
                 }}
               />
@@ -167,7 +167,7 @@ function Presentation() {
         
       </Card>
       <MKBox pt={6} px={1} mt={6}>
-        <DefaultFooter content={footerRoutes} />
+        <SimpleFooter content={footerRoutes} />
       </MKBox>
     </>
   );

@@ -19,31 +19,27 @@ const imagesPrefix =
 export default [
   {
     title: "Eventos",
-    description: "Producción y programación para espacios escenicos",
+    description: "Producción y Programación para espacios escenicos",
     items: [
       {
-        image: `${imagesPrefix}/alerts.jpg`,
-        name: "Alerts",
-        count: 4,
-        route: "/sections/attention-catchers/alerts",
+        image: "/Evento1.png",
+        name: "Carnval de Día",
       },
       {
-        image: `${imagesPrefix}/toasts.jpg`,
-        name: "Notifications",
-        count: 3,
-        pro: true,
+        image: "/fiestaFinAño.png",
+        name: "Fiesta de Fin de Año",
       },
       {
-        image: `${imagesPrefix}/popovers.jpg`,
-        name: "Tooltips & Popovers",
-        count: 2,
-        route: "/sections/attention-catchers/tooltips-popovers",
+        image: "/nocheVieja.png",
+        name: "NOCHEVIEJA",
       },
       {
-        image: `${imagesPrefix}/modals.jpg`,
-        name: "Modals",
-        count: 5,
-        route: "/sections/attention-catchers/modals",
+        image: "/Aguaje.png",
+        name: "AGUAJE GRUPO",
+      },
+      {
+        image: "/virgenSocorro.png",
+        name: "Fiestas en Honor a la Virgen del Socorro",
       },
     ],
   },
@@ -70,14 +66,6 @@ export default [
       {
         image: "/tonySantos.png",
         name: "Tony Santos",
-      },
-      {
-        image: `${imagesPrefix}/breadcrumbs.jpg`,
-        name: "Breadcrumbs",
-      },
-      {
-        image: `${imagesPrefix}/badges.jpg`,
-        name: "Badges",
       },
     ],
   },
