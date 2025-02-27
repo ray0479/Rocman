@@ -39,6 +39,7 @@ import MKButton from "components/MKButton";
 // Material Kit 2 React example components
 
 import DefaultNavbarMobile from "examples/Navbars/DefaultNavbar/DefaultNavbarMobile";
+import Logo from "../../../assets/images/logo.png"
 
 // Material Kit 2 React base styles
 import breakpoints from "assets/theme/base/breakpoints";
@@ -55,6 +56,9 @@ function DefaultNavbar({ logo, routes, transparent, light, action, sticky, relat
   const [mobileView, setMobileView] = useState(false);
 
   const openMobileNavbar = () => setMobileNavbar(!mobileNavbar);
+
+  const menuItems = [{name: "Eventos", route: "/"}, {name: "Artistas", route: "/"}, {name: "Sobre nosotros", route: "/"}]
+
 
   useEffect(() => {
     // A function that sets the display state for the DefaultNavbarMobile.
@@ -432,7 +436,7 @@ function DefaultNavbar({ logo, routes, transparent, light, action, sticky, relat
   );
 
   return (
-    <Container sx={sticky ? { position: "sticky", top: 0, zIndex: 10 } : null}>
+    <Container sx={sticky ? { position: "sticky", top: 0, zIndex: 10 } : null} width={30}>
       <MKBox
         py={1}
         px={{ xs: 4, sm: transparent ? 2 : 3, lg: transparent ? 0 : 2 }}
@@ -457,12 +461,43 @@ function DefaultNavbar({ logo, routes, transparent, light, action, sticky, relat
             lineHeight={1}
             py={transparent ? 1.5 : 0.75}
             pl={relative || transparent ? 0 : { xs: 0, lg: 1 }}
+            paddingTop={"5px"}
           >
-            <MKTypography variant="button" fontWeight="bold" color={light ? "white" : "dark"}>
-              <img src={logo}/>
-            </MKTypography>
+              <img src={logo} alt="logo" width={50}/>
           </MKBox>
-          
+          <MKBox
+            color="inherit"
+            display={{ xs: "none", lg: "flex" }}
+            ml="auto"
+            mr={center ? "auto" : 0}
+            padding={"0px 50px"}
+          >
+
+            {menuItems.map(( {name, route} ) => {
+              
+              return (
+                <>
+                  <MKBox
+                    padding={"0 20px"}
+                  >
+                  <MKTypography
+                      display="block"
+                      variant="button"
+                      fontWeight="bold"
+                      textTransform="capitalize"
+                      py={1}
+                      px={0.5}
+                      component={Link}
+                      to={route}
+                    >
+                      
+                      {name}
+                    </MKTypography>
+                  </MKBox>
+                </>  
+              );
+            })}
+          </MKBox>
           <MKBox ml={{ xs: "auto", lg: 0 }}>
             {action &&
               (action.type === "internal" ? (
@@ -526,7 +561,7 @@ function DefaultNavbar({ logo, routes, transparent, light, action, sticky, relat
 
 // Setting default values for the props of DefaultNavbar
 DefaultNavbar.defaultProps = {
-  logo: "../../../assets/images/logo.png",
+  logo: Logo,
   transparent: false,
   light: false,
   action: false,
