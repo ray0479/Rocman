@@ -76,7 +76,7 @@ function BuiltByDevelopers() {
               },
             }}
           >
-            Saber Más <Icon sx={{ fontWeight: "bold" }}>arrow_forward</Icon>
+            DESCUBRE MÁS <Icon sx={{ fontWeight: "bold" }}>arrow_forward</Icon>
           </MKTypography>
         </Grid>
       </Container>

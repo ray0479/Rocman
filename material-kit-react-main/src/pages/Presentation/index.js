@@ -111,7 +111,11 @@ function Presentation() {
         <Information />
         <DesignBlocks />
         <Pages />
-        <Container sx={{ mt: 6 }}>
+        <Container sx={{ mt: -40 }}>
+          {/* Título encima de los cuadros */}
+          <MKTypography variant="h4" component="h2" align="center" sx={{ mb: 4, fontSize: '2.5rem' }}>
+            Sobre Nosotros
+          </MKTypography>
           <BuiltByDevelopers />
         </Container>
         <Container>
@@ -120,40 +124,40 @@ function Presentation() {
               <FilledInfoCard
                 variant="gradient"
                 color="info"
-                icon="flag"
+                icon="queue_music"
                 title="Eventos a Medida"
                 description="Desde festivales hasta conciertos exclusivos, 
                 creamos experiencias únicas con un equipo de profesionales que cuida cada detalle."
                 action={{
                   type: "external",
                   route: "https://www.creative-tim.com/learning-lab/react/overview/material-kit/",
-                  label: "Let's start",
+                  label: "SABER MÁS",
                 }}
               />
             </Grid>
             <Grid item xs={12} lg={4}>
               <FilledInfoCard
                 color="info"
-                icon="precision_manufacturing"
-                title="Plugins"
-                description="Get inspiration and have an overview about the plugins that we used to create the Material Kit."
+                icon="headset"
+                title="Espacios Escénicos"
+                description="Colaboramos con recintos, ayuntamientos y empresas para ofrecer espectáculos de alta calidad."
                 action={{
                   type: "external",
                   route: "https://www.creative-tim.com/learning-lab/react/overview/datepicker/",
-                  label: "Read more",
+                  label: "LEER MÁS",
                 }}
               />
             </Grid>
             <Grid item xs={12} lg={4}>
               <FilledInfoCard
                 color="info"
-                icon="apps"
-                title="Components"
-                description="Material Kit is giving you a lot of pre-made components, that will help you to build UI's faster."
+                icon="mic_external_on"
+                title="Representación de Artistas"
+                description="Gestionamos talento para eventos privados y públicos, conectando a los mejores artistas con el público adecuado."
                 action={{
                   type: "external",
                   route: "https://www.creative-tim.com/learning-lab/react/alerts/material-kit/",
-                  label: "Read more",
+                  label: "LEER MÁS",
                 }}
               />
             </Grid>
