@@ -35,7 +35,7 @@ export default [
       },
       {
         image: "/Aguaje.png",
-        name: "AGUAJE GRUP",
+        name: "AGUAJE GRUPO",
       },
       {
         image: "/virgenSocorro.png",
