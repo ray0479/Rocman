@@ -122,7 +122,7 @@ function DefaultNavbar({ logo, transparent, light, action, sticky, relative, cen
               return (
                 <>
                   <MKBox
-                    padding={"0 20px"}
+                    padding={"0 10px"}
                   >
                   <MKTypography
                       display="block"
