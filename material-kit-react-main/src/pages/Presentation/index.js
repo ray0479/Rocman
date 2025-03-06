@@ -143,7 +143,7 @@ function Presentation() {
                 description="Colaboramos con recintos, ayuntamientos y empresas para ofrecer espectáculos de alta calidad."
                 action={{
                   type: "external",
-                  route: "https://www.creative-tim.com/learning-lab/react/overview/datepicker/",
+                  route: "",
                   label: "LEER MÁS",
                 }}
               />
@@ -156,7 +156,7 @@ function Presentation() {
                 description="Gestionamos talento para eventos privados y públicos, conectando a los mejores artistas con el público adecuado."
                 action={{
                   type: "external",
-                  route: "https://www.creative-tim.com/learning-lab/react/alerts/material-kit/",
+                  route: "",
                   label: "LEER MÁS",
                 }}
               />
