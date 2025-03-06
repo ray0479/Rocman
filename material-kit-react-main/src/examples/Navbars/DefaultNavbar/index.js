@@ -89,13 +89,12 @@ function DefaultNavbar({ logo, transparent, light, action, sticky, relative, cen
         borderRadius="xl"
         shadow={transparent ? "none" : "md"}
         color={light ? "white" : "dark"}
-        position={relative ? "relative" : "absolute"}
-        left="24%"  // Centra desde la izquierda
-        transform="translateX(-50%)"  // Ajusta el centro real
+        position="relative"
         zIndex={3}
         sx={({ palette: { transparent: transparentColor, white }, functions: { rgba } }) => ({
           backgroundColor: transparent ? transparentColor.main : rgba(white.main, 0.8),
           backdropFilter: transparent ? "none" : `saturate(200%) blur(30px)`,
+          justifyContent: "center",
         })}
       >
         <MKBox display="flex" justifyContent="space-between" alignItems="center">
