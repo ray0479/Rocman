@@ -113,7 +113,7 @@ function Presentation() {
         <Pages />
         <Container sx={{ mt: -40 }}>
           {/* Título encima de los cuadros */}
-          <MKTypography variant="h4" component="h2" align="center" sx={{ mb: 4, fontSize: '2.5rem' }}>
+          <MKTypography variant="h4" component="h2" align="center" sx={{ mb: 4, fontSize: '2.5rem' }} id="Aboutus">
             Sobre Nosotros
           </MKTypography>
           <BuiltByDevelopers />

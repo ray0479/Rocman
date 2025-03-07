@@ -40,13 +40,16 @@ import Logo from "../../../assets/images/logo.png"
 // Material Kit 2 React base styles
 import breakpoints from "assets/theme/base/breakpoints";
 
+import { HashLink } from "react-router-hash-link";
+
+
 function DefaultNavbar({ logo, transparent, light, action, sticky, relative, center }) {
   const [mobileNavbar, setMobileNavbar] = useState(false);
   const [mobileView, setMobileView] = useState(false);
 
   const openMobileNavbar = () => setMobileNavbar(!mobileNavbar);
 
-  const menuItems = [{name: "Eventos", route: "/"}, {name: "Artistas", route: "/"}, {name: "Sobre nosotros", route: "/"}]
+  const menuItems = [{name: "Eventos", route: "#Eventos"}, {name: "Artistas", route: "#Artistas"}, {name: "Sobre nosotros", route: "#Aboutus"}]
 
 
   useEffect(() => {
@@ -123,19 +126,20 @@ function DefaultNavbar({ logo, transparent, light, action, sticky, relative, cen
                   <MKBox
                     padding={"0 10px"}
                   >
-                  <MKTypography
+                  
+                    <MKTypography
                       display="block"
                       variant="button"
                       fontWeight="bold"
                       textTransform="capitalize"
                       py={1}
                       px={0.5}
-                      component={Link}
+                      component={HashLink}
                       to={route}
                     >
-                      
-                      {name}
+                     {name}
                     </MKTypography>
+                    
                   </MKBox>
                 </>  
               );
